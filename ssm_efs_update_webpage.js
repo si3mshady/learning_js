@@ -63,6 +63,5 @@ class EfsList {
 //Using JS to access data from EFS filesystem; genearate html sting to send to browser
 //6-22-20
 
-
 efs = new EfsList()
 efs.list_efs_share()
