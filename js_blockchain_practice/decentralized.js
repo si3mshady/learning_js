@@ -66,7 +66,7 @@ app.post('/register_broadcast',(req,res) => {
     node.register(new_node_url)    
     node.broadcast_to_network(new_node_url)
     console.log('Registered and broadcast')     
-    res.send('Registered and broadcast')  // then push somthing to the new node   
+    res.send(`Registered new node ${new_node_url} to current node ${node.public_ipv4} and broadcast to network!`)  // then push somthing to the new node   
 })  
 
 app.post('/register',(req,res) => {    
