@@ -45,6 +45,8 @@ ADDTEXT4
 ) > $NewFile
 
 sudo npm install
+wget https://raw.githubusercontent.com/si3mshady/learning_js/master/js_blockchain_practice/decentralized.js
+node decentralized.js
 
 
 
