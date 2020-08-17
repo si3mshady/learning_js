@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Russo One', sans-serif;
+}
+
+.lambda-wrapper {
+  position: absolute;   
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 300px;     
+  text-align: center;
+  color: orange;
+  perspective: 600px;
+  transform-style: preserve-3d;
+  
+ 
+}
+
+.compute-wrapper {   
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      width: 150px;
+      height: 300px;
+      color: orange;   
+      perspective: 600px;
+      transform-style: preserve-3d;
+  }
+
+.rds-wrapper {   
+      position: absolute;
+      top: 50%;
+      left: 75%;
+      width: 150px;
+      height: 300px;
+      color: orange;
+      perspective: 600px;
+      transform-style: preserve-3d;
+  }
+
+.front {   
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  text-align: center;
+  transform: rotateX(0deg);
+  transition: 0.5s;
+  backface-visibility: hidden;
+}
+
+.back h2 {
+  padding-top: 50px;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  text-align: center;
+  transform: rotateX(180deg);
+  transition: 0.5s;
+  backface-visibility: hidden;
+
+}
+
+
+.lambda-wrapper:hover .front {
+  transform: rotateX(-180deg);
+}
+.lambda-wrapper:hover .back {
+  transform: rotateX(0);
+}
+
+
+.compute-wrapper:hover .front {
+  transform: rotateX(-180deg);
+}
+
+.compute-wrapper:hover .back {
+  transform: rotateX(0);
+}
+
+
+
+.rds-wrapper:hover .front {
+  transform: rotateX(-180deg);
+}
+
+.rds-wrapper:hover .back {
+  transform: rotateX(0);
+}
+
+
+
+
