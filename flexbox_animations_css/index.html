@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./app.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Another AWS Mini App</title>
+</head>
+<body>
+
+    <div class="main">
+        
+        <aside id="sideBar" class="sideBar">
+            
+            <button id="aside-button"> X </button>
+
+            <div id="content">
+
+
+            </div>
+
+
+        </aside>
+    </div>
+    <div  class="main">
+
+        <h2>Select to view resource count</h2>
+        <!--create structure ul>li*5>label>input[type="checkbox"]+div.icon-->
+        <ul>
+            <li>
+                <button id="ec2" >
+                    <div  class="icon">
+                        <i class="fa fa-server" aria-hidden="true"></i>
+                    </div>
+                </button>
+            </li>
+            <li >
+                <button id='vpc'>
+                    <div  class="icon">                   
+                        <i class="fa fa-wifi" aria-hidden="true"></i>                   
+                    
+                </div>
+                </button>
+            </li>
+            <li>
+                <button id='secG'>
+                    <div class="icon">
+                        <i class="fa fa-lock" aria-hidden="true"></i>
+                    </div>
+                </button>
+            </li>
+            <li>
+                <button id="iam">
+                    <div class="icon">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                </button>
+            </li>
+        </ul>        
+
+
+
+    </div>
+   
+   
+    </body>
+</html>

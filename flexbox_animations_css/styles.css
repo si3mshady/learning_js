@@ -1,0 +1,138 @@
+* { 
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+}
+
+.main {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column; 
+    background-color: #292b33;   
+    
+}
+
+h2 {
+    color: grey;
+    margin-bottom: 30px;
+
+}
+
+ul {
+    position: relative;
+    display: flex;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+p {
+    margin: auto;
+    margin-left: 40px;
+    padding-bottom: 100px;
+    list-style-type: none;
+    font-size: 30px;
+    color: gold;
+    animation: animate 5s linear infinite;
+
+
+}
+
+ul li button {
+    position: relative;
+    display: flex;
+}
+
+ul li button {
+    position: relative;
+    /*opacity: 0;*/
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 8px;
+}
+
+/* Enlarge icon  by targeting the class*/
+/*great technique for increasing font size of icon */
+ul li button .icon {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-color: #18191f;
+    color:whitesmoke;
+    font-size: 50px;
+   
+    /* addresses icon iside of object/element/content*/ 
+    display: flex;
+    /* addresses icon iside of object/element/content on x-axis I belive */ 
+    justify-content: center;
+    /* addresses icon iside of object/element/content on y-axis I belive */  
+    align-items: center ;
+    border-radius: 10px;
+    box-shadow: -8px -8px 50px navy, 
+    8px 8px 8px green
+}
+
+ul li button .icon:hover {
+    color: orange;
+    animation: animate 5s linear infinite; 
+}
+
+.modify_color {
+   
+    animation: animate 5s linear infinite;
+
+}
+.modify_color:hover {
+    color:orange;
+    transform: translateY(-0.1rem);
+
+}
+
+@keyframes animate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+       /* transform: rotate(360deg); */
+    }
+}
+
+.sideBar {
+  height: 100%; /* 100% Full-height */
+  width: 0%; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  opacity: 50%;
+  color: white;  
+
+}
+
+.sideBarText {
+    color: white
+}
+
+#aside-button {
+    opacity: 1;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 25px;
+    font-size: 20px;
+    margin-left: 50px;
+    padding: 3px
+  }
+
+
+
+
