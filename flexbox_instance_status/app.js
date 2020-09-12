@@ -26,7 +26,7 @@ setInterval(() => {
         let length = keys.length             
 
         for (let i = 0; i < length; i++ ) {
-            const MAX_INSTANCES = length
+            
             populate_div(keys[i], mapping_data[keys[i]].Name)
         }}   
      ).then(res => { 
