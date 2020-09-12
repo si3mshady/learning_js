@@ -1,0 +1,44 @@
+body  {  margin: 0
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    
+}
+
+.tiles {
+    color: white;
+    font-size: 1rem;
+    display: flex;    
+    height: 100px;
+    width: 150px;
+    background-color: blue;
+    margin: 1px; 
+    margin-left: 50px;
+    text-align: center;
+
+} 
+
+.tiles p {
+    margin: auto;    
+    color: white;
+}
+
+.stopped {
+    background-color: red;
+}
+
+.running {
+    background-color: green;
+}
+
+.terminated {   
+    visibility: hidden;
+}
