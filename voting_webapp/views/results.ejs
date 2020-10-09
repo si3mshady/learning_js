@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/neon.css">
+
+   <link rel="stylesheet" href="/css/light.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.3/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+    <title>Document</title>
+</head>
+
+<body style="background: black" > 
+
+    <div class="top-half">
+        <h1 class="logo-1 top-half"> Results </h1>
+
+    </div>
+    
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide shift" data-ride="carousel" data-pause='hover' data-interval='3000'>
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">              
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="/images/check on me.gif" alt="Card image cap">
+              <div  style="background-color: black;" class="card-body center-text">
+
+
+                <h5 class="card-title logo-1"></h5> 
+                <p class="card-text logo-1">Return Home</p>
+                <form action="/" method="GET">
+                    <button class="btn" type="submit">Return</button>                
+                </form>               
+              </div>
+            </div>
+
+          </div>
+
+        
+          <% for (var index = 0; index < userNameList.length; index++) { %>
+          <div class="carousel-item  ">
+            <div class="card" style="width: 18rem;">
+             
+                <img class="card-img-top" src="/images/check on me.gif" alt="Card image cap">
+                <div  style="background-color: black;" class="card-body center-text ">
+                  <h5 class="card-title logo-1"> <%= userNameList[index] %> </h5>
+                  <p class="card-text logo-1"> <%= sideList[index] %> </p> 
+                  
+                  <form action="/" method="GET">
+                    <button class="btn" type="submit">Return</button>                
+                </form>                 
+                </div>            
+              </div>     
+
+          </div>
+          <% } %>
+        </div>
+    </div>
+
+    <%- include('footer') -%>

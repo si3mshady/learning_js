@@ -1,0 +1,41 @@
+<%- include('header') -%>
+
+<div class="container">
+    <div class="row">
+      <div style='color:wheat; margin-left: 546px;  font-family: "Abril Fatface"'' class="col-lg banner logo-1">
+        <h1>Choose your team</h1>
+      </div>
+      
+    </div>
+
+    <div class="row">     
+
+
+      <div class="col-lg">
+        <div class="wrap">
+          <form action="/results" method="POST">
+            <button type="submit" name='side' value='Jedi' class="button">Jedi</button>
+          </form>
+            
+          </div>        
+      </div>  
+      
+      <div class="col-lg">
+        <div class="wrap">
+            <form action="/results" method="POST">
+              <button type="submit" name='side' value='Sith' class="button-sith">Sith</button>
+            </form>
+            
+          </div>        
+      </div>  
+    </div>
+
+   
+  </div>
+
+
+
+
+
+
+<%- include('footer') -%>
