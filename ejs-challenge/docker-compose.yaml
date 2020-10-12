@@ -1,0 +1,23 @@
+version: '2'
+services:
+
+    mongodb:
+        image: mongo:latest
+        container_name: "mongodb"        
+        ports:
+              - 27017:27017
+
+
+    journal:
+        build: .
+        container_name: "myJournal"        
+        ports: 
+            - 3000:3000
+            
+        links:
+            - mongodb
+        
+   
+  
+        
+        

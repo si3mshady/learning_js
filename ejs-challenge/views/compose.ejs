@@ -1,0 +1,26 @@
+<%- include('partials/header') -%>
+
+<h1>Compose</h1>
+
+<form action="/compose" method="POST">
+    <div class="form-group">
+       <label > Title  </label> 
+        <input id='title' type="text" class="form-control" name='title'
+        placeholder="Title names must be unique to publish"      
+      </div>
+
+      <label > Post  </label> 
+      <div class="form-group">       
+        <textarea class="form-control" name='postBody' rows='4' cols='50'>  </textarea>   
+      </div>
+      <button class='btn btn-primary' type="submit">Publish</button>
+</form>
+
+
+<div class="compose-container">
+
+
+
+</div>
+
+<%- include('partials/footer') -%>
