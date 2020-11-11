@@ -8,7 +8,7 @@
   <body onload="init()">
     <div id="containerDiv" style="width: 400px;height: 800px;"></div>
     <script type="text/javascript">
-      var instanceURL = "https://arnoldcontactcenter.awsapps.com/connect/ccp";
+      var instanceURL = "https://<instance-name>.awsapps.com/connect/ccp";
 
       // initialize the streams api
       function init() {
