@@ -26,9 +26,7 @@ def cleanIndexJS():
 
 
 def removeFiles():
-    allFiles = glob.glob('src/*')
-   
-    
+    allFiles = glob.glob('src/*')   
     for file in allFiles:        
         if 'test' in file or 'svg' in file or 'register' in file:
             os.remove(file)
@@ -42,7 +40,6 @@ def test():
                 ink.write(result)
 
 
-
 def begin():
     patterns = {"\<div ([\S \s]+) <\/div>":"<div className='App'> </div>", \
     "import logo from './logo.svg';":'' }
@@ -51,7 +48,9 @@ def begin():
         cleanUpAppJS(pattern, repl)
 
     cleanIndexJS()    
-
     removeFiles()
 
-begin()
+   
+
+if __name__  == "__main__":
+  begin()
