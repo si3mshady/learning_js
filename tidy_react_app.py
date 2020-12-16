@@ -31,14 +31,6 @@ def removeFiles():
         if 'test' in file or 'svg' in file or 'register' in file:
             os.remove(file)
 
-def test():
-    with open('src/index.js') as index:
-            fileContent = index.read()
-            result = re.match('register', fileContent)            
-            print(result)
-            with open('src/index.js', 'w') as ink:
-                ink.write(result)
-
 
 def begin():
     patterns = {"\<div ([\S \s]+) <\/div>":"<div className='App'> </div>", \
