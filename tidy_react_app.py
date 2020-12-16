@@ -1,17 +1,20 @@
-import re, os, glob
+import re, os, glob, subprocess
 
 
 def cleanUpAppJS(pattern, replacement):  
     with open('src/App.js', 'r') as app:
         fileContent = app.read()
-        result = re.sub(pattern, replacement, fileContent)
-        
+        result = re.sub(pattern, replacement, fileContent)       
 
         with open('src/App.js', 'w') as ink:
             ink.write(result)
 
 def cleanIndexJS():
-    patterns = {"import registerServiceWorker from './registerServiceWorker';":'', "registerServiceWorker();":"" }
+
+    cmd = "sed -i \"\" 's/registerServiceWorker();//g' src/index.js"
+    res = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
+
+    patterns = {"import registerServiceWorker from './registerServiceWorker';":''}
     
     for pattern, repl in patterns.items():
        
@@ -30,6 +33,15 @@ def removeFiles():
         if 'test' in file or 'svg' in file or 'register' in file:
             os.remove(file)
 
+def test():
+    with open('src/index.js') as index:
+            fileContent = index.read()
+            result = re.match('register', fileContent)            
+            print(result)
+            with open('src/index.js', 'w') as ink:
+                ink.write(result)
+
+
 
 def begin():
     patterns = {"\<div ([\S \s]+) <\/div>":"<div className='App'> </div>", \
@@ -43,4 +55,3 @@ def begin():
     removeFiles()
 
 begin()
-
