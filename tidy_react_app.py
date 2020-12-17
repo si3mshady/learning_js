@@ -23,6 +23,9 @@ def cleanIndexJS():
             result = re.sub(pattern, repl, fileContent)            
             with open('src/index.js', 'w') as ink:
                 ink.write(result)
+                
+def createComponentsDirectory():
+    os.makedirs('src/components')
 
 
 def removeFiles():
@@ -41,7 +44,7 @@ def begin():
 
     cleanIndexJS()    
     removeFiles()
-
+    createComponentsDirectory()
    
 
 if __name__  == "__main__":
