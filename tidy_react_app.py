@@ -9,12 +9,21 @@ def cleanUpAppJS(pattern, replacement):
         with open('src/App.js', 'w') as ink:
             ink.write(result)
 
+def executeSedCommands():
+    cmdList = []
+    cmd1 = "sed -i \"\" 's/registerServiceWorker();//g' src/index.js"
+    cmd2 = "sed -i \"\" 's/reportWebVitals();//g' src/index.js"
+    cmdList.append(cmd1)
+    cmdList.append(cmd2)
+    for cmd in cmdList:
+        subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
+
+
 def cleanIndexJS():
+    executeSedCommands()
 
-    cmd = "sed -i \"\" 's/registerServiceWorker();//g' src/index.js"
-    res = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
-
-    patterns = {"import registerServiceWorker from './registerServiceWorker';":''}
+    patterns = {"import registerServiceWorker from './registerServiceWorker';":''\
+        ,"import reportWebVitals from './reportWebVitals';":""}
     
     for pattern, repl in patterns.items():
        
@@ -31,7 +40,9 @@ def createComponentsDirectory():
 def removeFiles():
     allFiles = glob.glob('src/*')   
     for file in allFiles:        
-        if 'test' in file or 'svg' in file or 'register' in file:
+        if 'test' in file or 'svg' in file or 'register' in file \
+             or 'report' in file \
+            or 'Test' in file:
             os.remove(file)
 
 
