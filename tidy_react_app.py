@@ -34,7 +34,10 @@ def cleanIndexJS():
                 ink.write(result)
                 
 def createComponentsDirectory():
-    os.makedirs('src/components')
+    try:
+        os.makedirs('src/components')
+    except FileExistsError:
+        pass
 
 
 def removeFiles():
@@ -47,7 +50,7 @@ def removeFiles():
 
 
 def begin():
-    patterns = {"\<div ([\S \s]+) <\/div>":"<div className='App'> </div>", \
+    patterns = {"\<div ([\S \s]+) <\/div>":"<div className='App'> Clean Slate </div>", \
     "import logo from './logo.svg';":'' }
 
     for pattern, repl in patterns.items():
