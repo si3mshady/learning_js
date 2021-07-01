@@ -1,5 +1,12 @@
 import re, os, glob, subprocess
 
+def wipeCSS():
+    cmd = "> index.css"
+    cmd1 = "> src/App.css"
+    cmd2 = "> src/index.css"
+    for exec in [cmd,cmd1,cmd2]:
+        subprocess.Popen(exec, stdout=subprocess.PIPE, shell=True)
+    
 
 def cleanUpAppJS(pattern, replacement):  
     with open('src/App.js', 'r') as app:
@@ -59,6 +66,7 @@ def begin():
     cleanIndexJS()    
     removeFiles()
     createComponentsDirectory()
+    wipeCSS()
    
 
 if __name__  == "__main__":
