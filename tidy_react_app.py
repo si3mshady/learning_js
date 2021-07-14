@@ -71,3 +71,9 @@ def begin():
 
 if __name__  == "__main__":
   begin()
+
+
+#run script from root directory of React Application 
+#removes commonly deleted files from create-react-app boilerPlate and wipes css files
+#cleanSlate
+#Elliott Arnold 7-14-21
